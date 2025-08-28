@@ -1,0 +1,46 @@
+1. GET
+const res = await fetch(url);
+
+
+res = Response object → contains status, headers, and a body stream.
+
+Usually body has data (like JSON).
+
+const data = await res.json();
+
+2. POST
+const res = await fetch(url, { method: "POST", body: JSON.stringify({...}) });
+
+
+Still returns a Response object.
+
+Typically server echoes back created resource (with a new id).
+
+const data = await res.json(); 
+// => { name: "...", email: "...", id: 101 }
+
+3. PUT
+const res = await fetch(url, { method: "PUT", body: JSON.stringify({...}) });
+
+
+Response = Response object.
+
+Usually contains the fully updated resource.
+
+4. PATCH
+const res = await fetch(url, { method: "PATCH", body: JSON.stringify({...}) });
+
+
+Response = Response object.
+
+Usually contains the partially updated resource.
+
+5. DELETE
+const res = await fetch(url, { method: "DELETE" });
+
+
+Response = Response object.
+
+Many APIs return an empty body (so calling res.json() may fail).
+
+JSONPlaceholder just returns {} with status 200.

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+    1.Write a JavaScript function that makes an HTTP GET request to retrieve a list of all posts from the JSONPlaceholder API and logs the response to the console. 
+
+Use this api https://jsonplaceholder.typicode.com/posts.  
+
+2.Create a JavaScript function that fetches a specific post with an ID of 5 from the JSONPlaceholder API and console.log the result. 
+
+ 3.Implement a JavaScript function that sends an HTTP POST request to create a new user on the JSONPlaceholder API with the following data: 
+
+   name : "Imeuswe App" and email: "imeuswe@example.com". 
+
+Use https://jsonplaceholder.typicode.com/users 
+ 
+
+4.Implement a JavaScript function that sends HTTP DELETE request to delete a user with the id of 2. 
+
+Use https://jsonplaceholder.typicode.com/users/2 api. 
+
+  
+
+5. Complete the following using https://jsonplaceholder.typicode.com/users/1/todos api. 
+
+(a) Use javascript .filter function to get all todos that are completed 
+
+(b) Use javascript .map function to create new data. The "completed" field should be renamed to "done". 
+
+6. Write the following functions in index.js and import them in test.js file: 
+
+(a) Function to add two numbers 
+
+(b) Function to return the current date in the format "Year/Month/Day". 
+
+ 
+ 
+ 
+ 
+ 
+ 
+7. (a) Use .then .catch to print the value of the following promise 
+
+let r = new Promise((resolve) => { 
+
+    resolve("Completed"); 
+
+  }) 
+
+  
+
+(b) Use async/await and try..catch to get the error in the following promise: 
+
+  
+
+function sayHello() { 
+
+    let promise = new Promise((resolve, reject) => { 
+
+    setTimeout(reject("An error has occurred"), 1000); 
+
+  }); 
+
+    return promise; 
+
+} 
+
+  
+
+8. Given the following object, use optional chaining to retrieve the value of the 'price' property if it exists. Otherwise, return the string 'Price not available'. 
+
+  
+
+const product = { 
+
+  name: 'Smartphone', 
+
+  details: { 
+
+    brand: 'XYZ', 
+
+    color: 'Black' 
+
+    // price property is missing 
+
+  } 
+
+}; 
+9. Install LTS node js version from this link https://nodejs.org/en 
+</body>
+<script src="first.js"></script>
+</html>
