@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <h2>Dummy</h2>
+    <form action="" method="post" class="space-y-3">
+        <input type="email" name="email" placeholder="enter your email" class="border p-2 rounded w-full" />
+        <br />
+        <input type="text" name="name" placeholder="enter name" class="border p-2 rounded w-full" />
+        <br />
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Send</button>
+    </form>
+</body>
+<script>
+    const f = document.querySelector('form');
+    f.addEventListener("submit", async function (e) {
+        e.preventDefault(); // prevent page reload
+
+        const email = document.getElementById("email").value;
+        const name = document.getElementById("name").value;
+
+        const obj = { email, name };
+        var output = await fetch(str, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(obj),
+        });
+        var y = await output.json();
+        console.log(y);
+
+    })
+   
+</script>
+
+</html>
