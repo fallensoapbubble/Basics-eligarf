@@ -11,22 +11,25 @@
 <body>
     <h2>Dummy</h2>
     <form action="" method="post" class="space-y-3">
-        <input type="email" name="email" placeholder="enter your email" class="border p-2 rounded w-full" />
+        <input type="email"  id="email" name="email" placeholder="enter your email" class="border p-2 rounded w-full" />
         <br />
-        <input type="text" name="name" placeholder="enter name" class="border p-2 rounded w-full" />
+        <input type="text" id="name"  name="name" placeholder="enter name" class="border p-2 rounded w-full" />
         <br />
         <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Send</button>
     </form>
 </body>
 <script>
+    const str = "https://jsonplaceholder.typicode.com/users";
+
     const f = document.querySelector('form');
     f.addEventListener("submit", async function (e) {
         e.preventDefault(); // prevent page reload
 
-        const email = document.getElementById("email").value;
-        const name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var name = document.getElementById("name").value;
+        
 
-        const obj = { email, name };
+        var obj = { email, name };
         var output = await fetch(str, {
             method: "POST",
             headers: {
