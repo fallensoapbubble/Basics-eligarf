@@ -185,12 +185,7 @@ const Form = ({ onFormChange }) => {
           onChange={handleChange}
           options={Array.from({ length: 31 }, (_, i) => i + 1)}
         />
-        <OutlinedInput
-          label="Day"
-          name="birthDay"
-          value={formData.birthDay}
-          onChange={handleChange}
-        />
+        
       </div>
 
       <OutlinedInput
